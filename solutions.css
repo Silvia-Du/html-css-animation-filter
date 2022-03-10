@@ -138,3 +138,25 @@
   25%  {right: 50%; bottom: -10px;}
   75%  {right: 69%; bottom: -10px;}
 }
+
+
+
+.ex-13-top-white {
+  animation-name: rotete-top;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  
+}
+
+
+@keyframes rotete-top {
+
+  0%{
+    transform: rotate(0deg)
+  }
+
+  50%  {left: 83%; top: -10px;}
+
+  50%  {transform: rotate(90deg)}
+
+  55% {left: 90%; top: 5px;}
