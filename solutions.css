@@ -72,13 +72,12 @@
   transform: scale(2);
 }
 
-.ex-8-img{
+.ex-10-img{
   animation-name: muovi-cerchio;
-  position: absolute;
   animation-duration: 6s;
 }
 
-@keyframes ruota.cerchi0 {
+@keyframes muovi.cerchio {
   0%{
     transform: rotate(0deg)
   }
