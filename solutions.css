@@ -34,14 +34,15 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.ex-5-square{
-
-}
 
 .ex-5-square:hover{
-  
-
+  transform: scale(1.5, 1.5);
 }
+
+.ex-5-square:active{
+  transform: scale(0.7);
+}
+
 
 .ex-6-img:hover{
   filter: grayscale(100%);
@@ -63,4 +64,36 @@
 .ex-8-img:hover{
   filter: drop-shadow( 30px 30px 5px brown) saturate(50%);
   border-radius: 25px;
+}
+
+.ex-9-img:hover{
+  filter: saturate(50%) grayscale(10%);
+  border-radius: 30px;
+  transform: scale(2);
+}
+
+.ex-8-img{
+  animation-name: muovi-cerchio;
+  position: absolute;
+  animation-duration: 6s;
+}
+
+@keyframes ruota.cerchi0 {
+  0%{
+    transform: rotate(0deg)
+  }
+  25%{
+    transform: rotate(25deg)
+  }
+  50%{
+    transform: rotate(50deg)
+  }
+  75%{
+    transform: rotate(75deg)
+  }
+  100%{
+    transform: rotate(100deg)
+  }
+
+
 }
