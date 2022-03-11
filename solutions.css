@@ -19,7 +19,7 @@
 }
 
 .ex-3-square{
-  transition-duration: 5s;
+  transition-duration: border-radius 5s;
 }
 
 .ex-3-square:hover{
@@ -27,20 +27,23 @@
 }
 
 .ex-4-square{
-  transition-duration: 5s;
+  transition:  opacity 5s;
 }
 
 .ex-4-square:hover{
-  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
 }
 
+.ex-5-square{
+  transition: all 2s;
+}
 
 .ex-5-square:hover{
-  transform: scale(1.5, 1.5);
+  transform: scale(2);
 }
 
 .ex-5-square:active{
-  transform: scale(0.7);
+  transform: scale(0.5);
 }
 
 
@@ -49,26 +52,29 @@
 }
 
 .ex-7-img{
-  transition-duration: 2s;
+  transition: all 2s;
 }
 
 .ex-7-img:hover{
-  filter: contrast(200%) hue-rotate(50deg);
+  filter: sepia(0.6) grayscale(0.4);
 }
 
 .ex-8-img{
-  transition-duration: 3s;
-  transition-timing-function: linear;
+  transition: all 3s;
 }
 
 .ex-8-img:hover{
-  filter: drop-shadow( 30px 30px 5px brown) saturate(50%);
+  filter: sepia(0.6) grayscale(0.2);
   border-radius: 25px;
 }
 
+.ex-9-img{
+  transition: all 2s;
+}
+
 .ex-9-img:hover{
-  filter: saturate(50%) grayscale(10%);
-  border-radius: 30px;
+  filter: sepia(0.6) grayscale(0.2);
+  border-radius: 25px;
   transform: scale(2);
 }
 
@@ -76,15 +82,12 @@
   animation-name: muovi-cerchio;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes muovi-cerchio {
-  0%{
-    transform: rotate(0deg)
-  }
-
   100%{
-    transform: rotate(360deg)
+    transform: rotate(1turn)
   }
 }
 
@@ -96,6 +99,7 @@
 }
 
 .ex-11-icon:hover{
+
   animation: move-alternate;
 }
 
@@ -104,59 +108,53 @@
     transform: rotate(0deg)
   }
 
-  60%{
-    transform: rotate(90deg)
+  90%{
+    transform: rotate(320deg)
   }
 
-  75%{
-    transform: rotate(270deg)
+  100%{
+    transform: rotate(0)
   }
 }
 
-.ex-12-top-white{
+
+
+.ex-12-top-white, .ex-12-bottom-white{
   animation-name: border-top-move;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
-@keyframes border-top-move {
-  0%   {left: 37%; top: -10px;}
-  25%  {left: 50%; top: -10px;}
-  75%  {left: 69%; top: -10px;}
-}
-
-.ex-12-bottom-white{
-  animation-name: border-bottom-move;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+@keyframes border-top-move{
+  0%   {left: 20%;}
+  50%  {left: 69%;}
+  100%  {left: 20%;}
 }
 
 @keyframes border-bottom-move {
-  0%   {right: 37%; bottom: -10px;}
-  25%  {right: 50%; bottom: -10px;}
-  75%  {right: 69%; bottom: -10px;}
+  0%   {right: 10%;}
+  50%  {right: 90%;}
+  100% {right: 10%;}
 }
 
 
 
-.ex-13-top-white {
+.ex-13-top-white:hover {
   animation-name: rotete-top;
-  animation-duration: 15s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
-  
 }
 
 
 @keyframes rotete-top {
 
-  0%{
-    transform: rotate(0deg)
-  }
+  25%{
+    top: {10px; left: calc(100% - 50px);}
 
-  50%  {left: 83%; top: -10px;}
+  38%  {top: 55px; left: calc(100% - 50px);}
 
-  50%  {transform: rotate(90deg)}
+  75%  {top: 55px; left: calc(100% - 10px);}
 
-  55% {left: 90%; top: 5px;}
+  88% {top: -10px; left: calc(100% - 10px);}
+
+  100% {left: 10%;}
